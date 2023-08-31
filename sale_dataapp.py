@@ -52,8 +52,6 @@ if len(product)==0 :
         city=df["City"]
     elif len(customer)==0 :
         customer=df["Customer_type"]
-    elif len(customer)==0 :
-        customer=df["Customer_type"]
     else :
         branch=df["Branch"]
     
