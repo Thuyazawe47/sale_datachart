@@ -58,7 +58,7 @@ for x in var:
           branch=df["Branch"]
       
     
-df_selection=df.query("Product_line==@product  and Customer_type==@customer and City==@city or Branch==@branch")
+df_selection=df.query("Product_line==@product  and Customer_type==@customer and City==@city and Branch==@branch")
 
 sales_by_product=df_selection.groupby("Product_line")["Total"].sum().sort_values(ascending=False)
 
