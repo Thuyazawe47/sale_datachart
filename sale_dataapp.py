@@ -50,11 +50,11 @@ var=[city,customer,product,branch]
 for x in var:
     if x==city and len(city)==0:
        city=df["City"]
-    if x==product and len(product)==0:
+    elif x==product and len(product)==0:
        product=df["Product_line"]
-    if x==customer and len(customer)==0:
+    elif x==customer and len(customer)==0:
        customer=df["Customer_type"]
-    if x==branch and len(branch)==0:
+    elif x==branch and len(branch)==0:
        branch=df["Branch"]
       
     
