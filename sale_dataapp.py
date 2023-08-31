@@ -46,8 +46,14 @@ with b:
     st.subheader("Total number of product line:")
     st.subheader(f" {item}")
     
-if len(product)==0 or len(city)==0 or len(customer)==0 or len(branch)==0:
-       df_selection=df.query("Product_line==@product or City==@city or Customer_type==@customer or Branch==@branch")
+if len(product)==0 :
+    df_selection=df.query("City==@city and Customer_type==@customer and Branch==@branch")
+elif len(city)==0 :
+      df_selection=df.query("Product_line==@product and Customer_type==@customer and Branch==@branch")
+elif len(customer)==0 :
+      df_selection=df.query("Product_line==@product and City==@city and Branch==@branch")
+elif len(branch)==0 :
+      df_selection=df.query("Product_line==@product and City==@city and Customer_type==@customer")  
 else :    
      df_selection=df.query("Product_line==@product and City==@city and Customer_type==@customer and Branch==@branch")
 
