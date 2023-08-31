@@ -11,7 +11,10 @@ df=pd.read_csv("saledata.csv")
 st.sidebar.header("Please choose the criteria")
 city=st.sidebar.multiselect("Select City",
                          options=df["City"].unique(),
-                         default=df["City"].unique()[:2])
+                         try :
+                             default=df["City"].unique()[:2])
+                         except:
+                               pass
 
 product=st.sidebar.multiselect("Select product line",
                          options=df["Product_line"].unique(),
@@ -23,7 +26,10 @@ customer=st.sidebar.multiselect("Select Customer_type",
 
 branch=st.sidebar.multiselect("Select Branch",
                          options=df["Branch"].unique(),
-                         default=df["Branch"].unique()[:2])
+                         try :
+                             default=df["Branch"].unique()[:2])
+                         except:
+                               pass 
 
                         
 st.title(":bar_chart:2019 Sales Dashboard") 
