@@ -47,15 +47,19 @@ with b:
     st.subheader(f" {item}")
     
 if len(product)==0 :
-    df_selection=df.query("City==@city and Customer_type==@customer and Branch==@branch")
+    product=df["Product_line"].unique()
+    
 elif len(city)==0 :
-      df_selection=df.query("Product_line==@product and Customer_type==@customer and Branch==@branch")
+     city=df["City"].unique()
+      
 elif len(customer)==0 :
-      df_selection=df.query("Product_line==@product and City==@city and Branch==@branch")
+      customer=df["Customer_type"].unique()
+      
 elif len(branch)==0 :
-      df_selection=df.query("Product_line==@product and City==@city and Customer_type==@customer")  
-else :    
-     df_selection=df.query("Product_line==@product and City==@city and Customer_type==@customer and Branch==@branch")
+       branch=df["Branch"].unique()
+      
+    
+df_selection=df.query("Product_line==@product and City==@city and Customer_type==@customer and Branch==@branch")
 
 sales_by_product=df_selection.groupby("Product_line")["Total"].sum().sort_values(ascending=False)
 
