@@ -47,7 +47,7 @@ with b:
     st.subheader(f" {item}")
     
 if len(product)==0 :
-      product=df["Product_line"]
+    product=df["Product_line"]
     elif len(city)==0 :
         city=df["City"]
     elif len(customer)==0 :
