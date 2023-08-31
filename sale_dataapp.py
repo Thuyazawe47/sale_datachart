@@ -47,16 +47,16 @@ with b:
     st.subheader(f" {item}")
     
 if len(product)==0 :
-      product=df["Product_line"].unique()
+      product=df["Product_line"]
     
 elif len(city)==0 :
-        city=df["City"].unique()
+        city=df["City"]
       
 elif len(customer)==0 :
-        customer=df["Customer_type"].unique()
+        customer=df["Customer_type"]
       
 elif len(branch)==0 :
-        branch=df["Branch"].unique()
+        branch=df["Branch"]
       
     
 df_selection=df.query("Product_line==@product and City==@city and Customer_type==@customer and Branch==@branch")
