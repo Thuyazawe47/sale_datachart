@@ -55,13 +55,13 @@ if len(product)==0 :
     else:
         branch=df["Branch"]
     
-elif len(city)==0 :
+elif len(city)==0:
         city=df["City"]
       
-elif len(customer)==0 :
+elif len(customer)==0:
         customer=df["Customer_type"]
       
-elif len(branch)==0 :
+elif len(branch)==0:
         branch=df["Branch"]
       
     
