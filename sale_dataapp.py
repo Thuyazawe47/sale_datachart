@@ -48,14 +48,14 @@ with b:
     
 var=[city,customer,product,branch]
 for x in var:
-    if x==city and len(city)==0:
+    if len(city)==0:
        city=df["City"]
-    elif x==product and len(product)==0:
-       product=df["Product_line"]
-    elif x==customer and len(customer)==0:
-       customer=df["Customer_type"]
-    elif x==branch and len(branch)==0:
-       branch=df["Branch"]
+    elif len(product)==0:
+         product=df["Product_line"]
+    elif len(customer)==0:
+         customer=df["Customer_type"]
+    elif len(branch)==0:
+          branch=df["Branch"]
       
     
 df_selection=df.query("Product_line==@product and City==@city and Customer_type==@customer and Branch==@branch")
