@@ -24,7 +24,7 @@ customer=st.sidebar.multiselect("Select Customer_type",
 
 branch=st.sidebar.multiselect("Select Branch",
                          options=df["Branch"].unique(),
-                         default=df["Branch"].unique()[:2])
+                         default=df["Branch"].unique()[:3])
 
                         
 st.title(":bar_chart:2019 Sales Dashboard") 
