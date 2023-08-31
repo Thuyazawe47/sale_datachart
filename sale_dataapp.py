@@ -48,6 +48,14 @@ with b:
     
 if len(product)==0 :
       product=df["Product_line"]
+  if len(city)==0 :
+        city=df["City"]
+    elif len(customer)==0 :
+        customer=df["Customer_type"]
+    elif len(customer)==0 :
+        customer=df["Customer_type"]
+    else :
+        branch=df["Branch"]
     
 elif len(city)==0 :
         city=df["City"]
